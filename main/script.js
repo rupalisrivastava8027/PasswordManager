@@ -70,10 +70,10 @@ function getCredentials()
 
     for (let i = 0; i < credentials.length; i++)
     {
-        if (credentials[i][0] == find)
+        if (credentials[i][0].toLowerCase() == find.toLowerCase())
         {
             console.log("Found password: " + credentials[i][1]);
-           
+            document.getElementById("result").innerHTML = "Found password: " + credentials[i][1];
         }
     }
 
