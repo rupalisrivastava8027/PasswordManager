@@ -1,3 +1,7 @@
+:root
+{
+    --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 h1
 {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
@@ -19,12 +23,25 @@ button
 input
 {
     font-size: 40px;
-    font-family:'Courier New', Courier, monospace;
+    font-family: ver(--font);
 }
 .find
 {   
     
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    font-family: var(--font);
     font-size: 20px;
 }
+
+.recent
+{
+    font-family: var(--font);
+    
+    select
+        {
+            font-size: large;
+            width:20%;
+    }
+    
+}
+

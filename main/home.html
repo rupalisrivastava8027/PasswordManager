@@ -10,22 +10,37 @@
 
   <body>
 
-    <h1 id="title">Password Manager</h1>
+    <h1 id="pageTitle">Password Manager</h1>
 
-    <button onclick="add()"> Add Credentials </button>
     
-    <br>
-    <br>
     <div class="find">
-      <input type="search" placeholder="Domain Name" id="find">
+      <input style="font-size:125%; width: 50%;"  type="search" placeholder="Search..." id="find">
       <button onclick="getCredentials()"> Find </button>
       
-      <p id="paragraph"> </p>
-      <p id="result"> </p>
+      <p id="search"> </p>
+      <p style="font-style: italic;" id="result"></p>
+
+      <p style="font-weight: bold;" id="username"> </p>
+      <p style="font-weight: bold;" id="password" onmouseover="changeFromHidden()" onmouseleave="changeToHidden()"> </p>
+      
 
     </div>
 
+    <button onclick="add()"> Add Credentials </button>
+
+    <!-- <div class="recent">
+      
+      <h3> Recent </h3>
+      <div class="f">
+        <select name="Test">
+          <option value="Username"> username </option>
+          <option value="Password"> password   </option>
+
+        </select>
+      </div>
+    </div> -->
     
     
   </body>
 </html>
+
