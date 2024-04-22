@@ -1,22 +1,29 @@
 :root
 {
     --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-h1
-{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
-    font-size: 100px;
-    text-align: center; 
-    background-color: rgb(104, 127, 241);
+    --themeColor: rgb(43, 18, 96);
+    --subThemeColor: #886eb1;
 }
 
+.title
+{
+    background-color: var(--themeColor);
+    font-family: var(--font);
+    font-size: 40px;
+    
+    text-align: center;
+    
+    color: white;
+   
+
+}
 button
 {
     
-    color: #000;
+    color: white;
     border: none;
-    font-size: 40px;
-    background-color: rgb(75, 122, 224); 
+    font-size: 30px;
+    background-color:var(--subThemeColor); 
        
 }
 
@@ -25,23 +32,55 @@ input
     font-size: 40px;
     font-family: ver(--font);
 }
-.find
+.Header
 {   
-    
     text-align: left;
     font-family: var(--font);
-    font-size: 20px;
+
 }
 
-.recent
+.Header > input 
 {
+    color:gray;
+    font-size: 20px;
+    width: 50%;
+    padding: 5px;
+}
+
+.Header > button 
+{
+    color: rgb(22, 2, 41);
+    border: none;
+    font-size: 30px;
+    background-color:var(--subThemeColor);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin:5px;
+   
+}
+.Recents
+{
+    /* background-color: orange; */
+
+    width: 48%;
+    height:fit-content;
+
     font-family: var(--font);
+    font-size: 20px;
     
-    select
-        {
-            font-size: large;
-            width:20%;
-    }
     
+}
+
+.Recents ul
+{
+    position: absolute;
+    transition: all 10s ease;
+}
+
+.Recents:hover ul li
+{
+    background-color:rgb(43, 18, 96);
+    height: 50px;
+    transform: translateY();
 }
 

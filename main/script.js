@@ -2,6 +2,14 @@ let credentials = new Map();
 
 let realPassword = "";
 
+document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelector("#g").innerHTML = "password";
+
+    document.querySelector("#h").innerHTML = localStorage.getItem("password");
+
+});
+
 function add()
 {
     let domain = prompt("Domain: ");

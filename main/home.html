@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
 
         <title> Password Manager </title>
@@ -10,23 +10,31 @@
 
   <body>
 
-    <h1 id="pageTitle">Password Manager</h1>
-
+    <div class="title">
+      <h1>Password Manager</h1>
+    </div>
     
-    <div class="find">
-      <input style="font-size:125%; width: 50%;"  type="search" placeholder="Search..." id="find">
+    <div class="Header">
+      <input type="search" placeholder="Search...">
+
       <button onclick="getCredentials()"> Find </button>
-      
-      <p id="search"> </p>
+     
+      <button style="width: 75px; margin: 10px;" onclick="add()"> + </button>
+    
+      <!-- <p id="search"> </p>
       <p style="font-style: italic;" id="result"></p>
 
       <p style="font-weight: bold;" id="username"> </p>
       <p style="font-weight: bold;" id="password" onmouseover="changeFromHidden()" onmouseleave="changeToHidden()"> </p>
-      
+       -->
 
+    
+      
     </div>
 
-    <button onclick="add()"> Add Credentials </button>
+    <div class="Recents">
+      
+    </div>
 
     <!-- <div class="recent">
       
