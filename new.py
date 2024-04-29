@@ -10,8 +10,14 @@ credentials = [
     }
 ]
 
-@app.route("/")
+@app.route("/", methods = ["POST", "GET"])
 def home():
+
+    if request.method == "POST":
+
+        if "generatePassword" in request.form:
+            print("Clicked")
+
     return render_template("pages/Home.html", credentials=credentials)
 
 
@@ -24,7 +30,16 @@ def submit():
     username = request.form.get("username")
     password = request.form.get("password")
     domain = request.form.get("domain")
+    
+    credentials.append (
+        {
+            "domain": domain,
+            "username": username,
+            "password": password
+        }
+    )   
 
+    print(credentials)
     return render_template("pages/Submit.html", username=username, password=password, domain=domain)
 
 

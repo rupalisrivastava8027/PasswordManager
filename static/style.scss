@@ -1,77 +1,117 @@
+$color1: rgb(109, 152, 162);
+$color2: black;
+$color3: rgb(4, 114, 88);
+
+
+$font1: "Arial";
+
+
+
 .title {
-    background-color: rgb(43, 18, 96);
-    font-family: "Trebuchet MS";
-    font-size: 40px;
-    text-align: center;
-    color: white;
-  }
-  
-  button {
-    color: white;
-    border: none;
-    font-size: 30px;
-    background-color: #886eb1;
-  }
-  
-  input {
-    font-size: 40px;
-    font-family: "Trebuchet MS";
-  }
-  
-  .Header {
+    background-color: $color1;
+    font-family: $font1;
+    font-size: 25px;
     text-align: left;
-    font-family: "Trebuchet MS";
-  }
-  .Header input {
+    color: rgb(0, 0, 0);
+
+    height: 100px; 
+    
+
+    align-content: center;
+
+    padding-left: 20px;
+    
+
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+
+    
+}
+  
+
+  
+.Header {
+  text-align: left;
+  font-family: $font1;
+
+  input {
     color: gray;
     font-size: 20px;
     width: 50%;
     padding: 5px;
+    font-family: $font1;
+    border-color: rgb(94, 91, 91);
+
+    border-width: 4px;
+    border-style: solid;
+
+    margin: 20px 5px;
+    
   }
-  .Header button {
+
+  button {
     color: rgb(22, 2, 41);
     border: none;
-    font-size: 30px;
-    background-color: subThemeColor;
+    font-size: 25px;
+    background-color: $color3;
     padding-left: 10px;
     padding-right: 10px;
     margin: 5px;
   }
+}
+
+body
+{
+  background-color: rgb(174, 169, 169);
+}
+
+.Recents {
+  // background-color:rgb(123, 186, 192);
+  width: 48%;
+  height: 100%;
+  font-family: $font1;
+  font-size: 20px;
+  margin: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 3;
   
-  .Recents {
-    background-color: orange;
-    width: 48%;
-    height: -moz-fit-content;
-    height: fit-content;
-    font-family: font;
-    font-size: 20px;
+}
 
-    
-  }
+.domainButtonClass
+{
+  background-color: #8ab7a9;
+  border: none;
+  font-size: 30px;
+  margin: 10px;
 
-  .domainButtonClass
-  {
-    background-color: #886eb1;
-  }
+  
 
-  .domain
-  {
-    background-color: aqua;
-  }
+}
+
+.domain
+{
+  background-color: #8ab7a9;
+}
 
 
-  .credentials
-  {
-    position: absolute;
-    background-color:rgb(87, 87, 201);
-    box-shadow:0 2px 5px 0 rgba(87, 87, 201, .1);
-    display: none; 
+.credentials
+{
+  position: relative;
+  background-color:rgb(123, 186, 192);
+  box-shadow:0 2px 5px 0 rgba(87, 87, 201, .1);
+  display: none; 
+  opacity: 0;
+  padding: 10px;
 
-    /* transition: opacity 150ms ; */
-  }
+  /* transition: opacity 150ms ; */
+}
 
-  .domain > input:focus + .credentials
-  {
-    display: block;
-  }
-  /*# sourceMappingURL=style.css.map */
+.domain:hover  + .credentials
+{
+  display: contents;
+  // opacity: 1;
+  
+}
+/*# sourceMappingURL=style.css.map */
