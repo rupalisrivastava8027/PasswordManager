@@ -2,13 +2,22 @@
 <html lang="en">
 
     <head> 
+        
         {% block content %}
 
         {% endblock %}
     </head>
 
     <body>
-        <a href="http://127.0.0.1:5000/"> <img src="home.png" alt="Home" width="20px" height="20px"></a>
+
+        <a href ="http://127.0.0.1:5000/">
+            <div class="title">
+              <h1>Password Manager</h1>
+            </div>
+          </a>
+        
+          {% block else %}
+          {% endblock %}
     </body>
 
   

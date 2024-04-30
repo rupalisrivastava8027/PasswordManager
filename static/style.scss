@@ -15,7 +15,8 @@ $font1: "Arial";
     color: rgb(0, 0, 0);
 
     height: 100px; 
-    
+
+    width: 50%;
 
     align-content: center;
 
@@ -25,6 +26,12 @@ $font1: "Arial";
     margin-top: -10px;
     margin-left: -10px;
     margin-bottom: 10px;
+
+    
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    
 
     
 }
@@ -46,7 +53,8 @@ $font1: "Arial";
     border-width: 4px;
     border-style: solid;
 
-    margin: 20px 5px;
+    margin: 80px 5px;
+
     
   }
 
@@ -99,7 +107,7 @@ body
 .credentials
 {
   position: relative;
-  background-color:rgb(123, 186, 192);
+  background-color:rgb(66, 93, 95);
   box-shadow:0 2px 5px 0 rgba(87, 87, 201, .1);
   display: none; 
   opacity: 0;
