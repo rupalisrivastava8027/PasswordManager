@@ -1,22 +1,37 @@
-<!DOCTYPE html>
 <html lang="en">
 
     <head> 
-        
-        {% block content %}
+    
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+      <script src="{{ url_for('static', filename='homeScript.js') }}"></script>
+
+        {% block head %}
 
         {% endblock %}
+
     </head>
 
     <body>
+       
+      <div class="title">
+      
+        <h1> Password Manager </h1> 
+      
+      </div>
+      
+      <div class="nav">
 
-        <a href ="http://127.0.0.1:5000/">
-            <div class="title">
-              <h1>Password Manager</h1>
-            </div>
-          </a>
-        
-          {% block else %}
+        - -
+
+        <div class="-nav">
+          <a href="http://127.0.0.1:5000/"> <input class="pages" type="button" value="Home"> </a>
+          <a href="http://127.0.0.1:5000/"> <input class="pages" type="button" value="Generate Password"> </a>
+
+        </div>
+
+      </div>
+      
+          {% block body %}
           {% endblock %}
     </body>
 

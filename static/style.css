@@ -1,84 +1,130 @@
+@font-face {
+  font-family: test;
+  src: url(Khand-Regular.ttf);
+}
+@font-face {
+  font-family: test;
+  src: url(Khand-Regular.ttf);
+  font-style: bold;
+}
 .title {
-  background-color: rgb(109, 152, 162);
-  font-family: "Arial";
-  font-size: 25px;
-  text-align: left;
-  color: rgb(0, 0, 0);
+  background-color: #47379b;
+  font-family: system-ui;
+  font-size: 35px;
+  letter-spacing: 5;
+  text-align: center;
+  color: rgb(210, 207, 207);
   height: 100px;
-  width: 50%;
-  align-content: center;
-  padding-left: 20px;
-  margin-top: -10px;
-  margin-left: -10px;
-  margin-bottom: 10px;
-  border-color: black;
-  border-width: 5px;
-  border-style: solid;
+  margin-top: -10;
+  margin-left: -8;
+  margin-right: -8;
 }
 
-.Header {
-  text-align: left;
-  font-family: "Arial";
+.title:hover {
+  box-shadow: 5px 5px 10px gray;
 }
-.Header input {
+
+body {
+  background-color: rgb(219, 210, 210);
+}
+
+.nav {
+  font-size: 40;
+  width: 3%;
+  margin-left: 25;
+}
+
+.-nav {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #47379b;
+  border-style: solid;
+  border-width: 5;
+  border-color: #2e2363;
+  z-index: 1;
+  display: none;
+}
+.-nav .pages {
+  font-size: 35px;
+  font-family: system-ui;
+  margin: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff7f7;
+}
+
+.pages:hover {
+  color: #000;
+}
+
+.nav:hover .-nav {
+  display: block;
+  transform: rotateX("90");
+  box-shadow: 100px 100px 500px rgb(79, 78, 78);
+}
+
+.main {
+  background-color: #fff7f7;
+  height: 100%;
+  font-family: system-ui;
+  margin-top: 20px;
+  position: relative;
+
+}
+.main .Header {
+  text-align: left;
+  font-family: system-ui;
+}
+.main .Header input {
   color: gray;
   font-size: 20px;
   width: 50%;
   padding: 5px;
-  font-family: "Arial";
-  border-color: rgb(94, 91, 91);
-  border-width: 4px;
-  border-style: solid;
-  margin: 80px 5px;
+  font-family: system-ui;
+  margin: 30px 25px;
+  position: relative;
 }
-.Header button {
-  color: rgb(22, 2, 41);
+.main .Header button {
+  color: rgb(210, 207, 207);
   border: none;
   font-size: 25px;
-  background-color: rgb(4, 114, 88);
-  padding-left: 10px;
-  padding-right: 10px;
+  background-color: #2e2363;
+  padding: 5 16;
   margin: 5px;
+  position: relative;
+  right: 115px;
 }
-
-body {
-  background-color: rgb(174, 169, 169);
+.main .Heading {
+  font-size: 40;
+  padding-left: 20;
+  margin-top: 10;
 }
-
-.Recents {
-  width: 48%;
-  height: 100%;
-  font-family: "Arial";
-  font-size: 20px;
-  margin: 5px;
-  border-color: black;
+.main .domain {
   border-style: solid;
-  border-width: 3;
+  border-width: 5;
+  width: 15%;
+  margin: 30 25;
+  background-color: transparent;
 }
-
-.domainButtonClass {
-  background-color: #8ab7a9;
+.main .domain .domainButtonClass {
+  background-color: transparent;
   border: none;
   font-size: 30px;
-  margin: 10px;
+  margin: 8px;
 }
-
-.domain {
-  background-color: #8ab7a9;
-}
-
-.credentials {
+.main .credentials {
   position: relative;
-  background-color: rgb(66, 93, 95);
-  box-shadow: 0 2px 5px 0 rgba(87, 87, 201, 0.1);
   display: none;
-  opacity: 0;
-  padding: 10px;
+  border-style: solid;
+  border-width: 2;
+  width: 30%;
+  margin: 0 25;
   /* transition: opacity 150ms ; */
 }
-
-.domain:hover + .credentials {
-  display: contents;
+.main .credentials p {
+  margin-left: 20;
 }
-
-/*# sourceMappingURL=style.css.map */
+.main .domain:hover + .credentials {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

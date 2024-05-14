@@ -9,39 +9,42 @@
     </head>
 
   <body>
-    <a href ="http://127.0.0.1:5000/">
-      <div class="title">
-        <h1>Password Manager</h1>
-      </div>
-    </a>
-
-    <!-- <img src=" {{ url_for('static', filename='Logo.png') }}" style="width: 250px; position: relative; bottom: 220 px;"> -->
+   
+    <div class="title">
     
-    <div class="Header">
-      <input type="search" placeholder="Search...">
-
-      <button> Find </button>
-     
-      <a href=" {{ url_for('addCredentials') }}"> 
-        <button style="width: 75px; margin: 10px;"> + </button>
-      </a>
-      
-      <form method="post"> 
-        <button id="randomPassword" name="generatePassword" type="submit" style="width: 75px; margin: 10px;"> Generate Password </button>
-      </form>
-      
-  
-      <!-- <p id="search"> </p>
-      <p style="font-style: italic;" id="result"></p>
-
-      <p style="font-weight: bold;" id="username"> </p>
-      <p style="font-weight: bold;" id="password" onmouseover="changeFromHidden()" onmouseleave="changeToHidden()"> </p>
-       -->
-
+      <h1> Password Manager </h1> 
+    
     </div>
     
+    <div class="nav">
 
-    <div class="Recents">
+      - -
+
+      <div class="-nav">
+        <a href="http://127.0.0.1:5000/"> <input class="pages" type="button" value="Home"> </a>
+        <a href="http://127.0.0.1:5000/"> <input class="pages" type="button" value="Generate Password"> </a>
+
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="Header">
+        
+        <input type="search" placeholder="Search...">
+
+        <button> Find </button>
+      
+        <a href=" {{ url_for('addCredentials') }}"> 
+          
+          <button style="width: 75px; margin: 10px;"> + </button>
+        
+        </a>
+    
+      </div>
+    
+
+
       {% for credential in credentials %}
         <div class="domain"> 
           <input class="domainButtonClass" type="button" value="{{ credential.domain }}"> 

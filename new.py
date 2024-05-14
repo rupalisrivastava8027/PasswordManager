@@ -8,15 +8,11 @@ credentials = [
         "username": "Aarush",
         "password": "jdiojwioq"
     }
+    
 ]
 
 @app.route("/", methods = ["POST", "GET"])
 def home():
-
-    if request.method == "POST":
-
-        if "generatePassword" in request.form:
-            print("Clicked")
 
     return render_template("pages/Home.html", credentials=credentials)
 
